@@ -1,2 +1,2 @@
 # Voting-System-with-Facial-Recognition-
-This project is used for automatic voting system
+We have develop a voting system based purely  on java which is robust and user friendly.Our system offers a secure  environment which verifies user by facial recognition which is most  advance verification technique.Our system has simple and minimal  user interface with extra feature of small level polling such as survey  etc.Java FX is used to develop simple and interactive GUI.
