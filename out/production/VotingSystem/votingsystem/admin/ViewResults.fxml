@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="700.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C1CDC6;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="votingsystem.admin.ViewResultsController">
+   <center>
+      <TableView fx:id="tableCandidateResult" maxHeight="300.0" minHeight="300.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="candidateNameCol" minWidth="150.0" prefWidth="227.0" style="-fx-background-color: CFD8DC;" text="Candidate Name" />
+          <TableColumn fx:id="candidatePartyCol" minWidth="150.0" prefWidth="240.0" style="-fx-background-color: CFD8DC;" text="Party Name" />
+            <TableColumn fx:id="candidateVoteCol" minWidth="150.0" prefWidth="231.0" style="-fx-background-color: CFD8DC;" text="Votes" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backbtnAction" style="-fx-background-color: #C1CDC6;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back_btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label text="Select District " textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="selectDistrictBox" prefWidth="150.0" style="-fx-background-color: bdc3c7;" />
+            <Button mnemonicParsing="false" onAction="#viewResultBtnAction" style="-fx-background-color: bdc3c7;" text="View Results " textFill="#ecf0f1">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BarChart fx:id="VoteChart" maxHeight="200.0" prefHeight="200.0" prefWidth="700.0" title="Votes">
+              <xAxis>
+                <CategoryAxis label="Candidates" prefWidth="618.0" side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" prefHeight="114.0" prefWidth="52.0" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children></Pane>
+   </bottom>
+</BorderPane>

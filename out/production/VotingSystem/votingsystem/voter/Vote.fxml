@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane minHeight="600.0" minWidth="700.0" style="-fx-background-color: #C1CDC6;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="votingsystem.voter.VoteController">
+   <top>
+      <HBox prefHeight="58.0" prefWidth="662.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Button fx:id="backBtn" mnemonicParsing="false" onAction="#setBackBtnAction" style="-fx-background-color: #C1CDC6;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/back_btn.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <right>
+      <TableView fx:id="tableCandidateList" maxHeight="539.0" maxWidth="690.0" minHeight="400.0" minWidth="600.0" prefHeight="539.0" prefWidth="690.0" style="-fx-background-color: F5F5F5;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columnFirstName" minWidth="100.0" prefWidth="101.0" style="-fx-background-color: CFD8DC;" text="FIRST NAME" />
+          <TableColumn fx:id="columnLastName" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: CFD8DC;" text="LAST NAME" />
+            <TableColumn fx:id="columnPartyName" minWidth="100.0" prefWidth="139.0" style="-fx-background-color: CFD8DC;" text="PARTY NAME" />
+            <TableColumn fx:id="columnDistrict" minWidth="100.0" prefWidth="162.0" style="-fx-background-color: CFD8DC;" text="DISTRICT" />
+            <TableColumn fx:id="columnVote" minWidth="100.0" prefWidth="147.0" style="-fx-background-color: CFD8DC;" text="VOTE" />
+        </columns>
+      </TableView>
+   </right>
+</BorderPane>
